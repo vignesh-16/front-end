@@ -1,0 +1,43 @@
+body {
+    background-color:aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    background-color: white;
+    width: 330px;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.container > .qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 2px 15px 2px;
+}
+
+.qrcode > img {
+    border-radius: 10px;
+}
+
+.description span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 34px;
+    font-size: x-large;
+}
+
+.instruction span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    padding: 15px 17px 35px 26px;
+    color: dimgrey;
+}
