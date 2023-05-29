@@ -1,5 +1,5 @@
 body {
-    background-color:aliceblue;
+    background-color: hsl(212, 45%, 89%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,9 +9,9 @@ body {
 
 .container {
     background-color: white;
-    width: 330px;
+    width: 21em;
     height: fit-content;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .container > .qrcode {
@@ -22,7 +22,7 @@ body {
 }
 
 .qrcode > img {
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 .description span {
@@ -39,5 +39,5 @@ body {
     align-items: center;
     font-weight: lighter;
     padding: 15px 17px 35px 26px;
-    color: dimgrey;
+    color: hsl(220, 15%, 55%);
 }
