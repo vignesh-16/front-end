@@ -1,43 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&family=Outfit:wght@100;500&display=swap');
+
 body {
-    background-color:aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Outfit', sans-serif;
+    font-family: Hanken Grotesk, sans-serif;
+    font-size: 18px;
 }
 
 .container {
-    background-color: white;
-    width: 330px;
-    height: fit-content;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0%;
+    height: 27em;
+    width: 39%;
+    padding: 0%;
+    border-radius: 6%;
+    box-shadow: aliceblue 10px 10px 15px 11px;
 }
 
-.container > .qrcode {
+.overallResult {
+    color: white;
+    background-image: linear-gradient(to bottom left, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 2em;
+    width: 100%;
+}
+
+.summary {
+    padding: 0% 8% 0% 8%;
+}
+
+.summaryHeading {
+    font-size: 1.3em;
+    padding: 13% 0% 5% 0%;
+}
+
+.section {
+    padding: 6% 0% 6% 0%;
+    display: flex;
+    margin: 4% 0px 10px 0px;
+    width: 100%;
+    border-radius: 0.5em;
+    place-content: space-around;
+} 
+
+.trait {
+    width: 7em;
+}
+
+.Reaction {
+    background-color: hsl(0, 100%, 96%);
+    .trait {
+        color : hsl(0, 100%, 67%);
+    }
+    .total {
+        color: darkgray;
+    }
+}
+
+
+.Memory {
+    background-color:hsl(39, 100%, 96%);
+    .trait {
+        color : hsl(39, 100%, 56%);
+    }
+} 
+
+.Verbal {
+    background-color: hsl(166, 100%, 97%);
+    .trait {
+        color : hsl(166, 100%, 37%);
+    }
+} 
+
+.Visual {
+    background-color: hsl(252, 100%, 97%);
+    .trait {
+        color :  hsl(234, 85%, 45%);
+    }
+}
+
+.continue {
+    display: flex;
+    justify-content: center;
+    margin: 12% 0% 7% 0%;
+}
+
+.continue button {
+    width: 95%;
+    border-radius: 3em;
+    padding: 6% 0% 6% 0%;
+    outline: none;
+    border: none;
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+}
+
+.continue :hover {
+    width: 95%;
+    border-radius: 3em;
+    padding: 6% 0% 6% 0%;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to bottom left, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: white;
+}
+
+.score {
+    color: darkgray;
+}
+
+.scored {
+    color: black;
+}
+
+.resultHeading {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 2px 15px 2px;
+    padding : 9% 2% 9% 2%;
+    font-size: 25px;
+    color: hsl(241, 100%, 89%);
 }
 
-.qrcode > img {
-    border-radius: 10px;
+.marks {
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
-.description span {
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50%;
+    padding: 12% 0% 12% 0%;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.obtained {
+    font-size: 55px;
+}
+
+.maximumMarks {
+    color: hsl(241, 100%, 89%);
+    font-size: 18px;
+}
+
+.verdict {
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 34px;
-    font-size: x-large;
+    padding: 6% 0% 6% 0%
 }
 
-.instruction span {
+.trivia {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: lighter;
-    padding: 15px 17px 35px 26px;
-    color: dimgrey;
+    text-align: center;
+    padding: 0% 15% 0% 15%;
+    color: hsl(241, 100%, 89%)
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: max-content;
+        border-radius: 0%;
+    }
+
+    .trivia {
+        padding: 0% 15% 10% 15%;;
+    }
+
+    .resultHeading {
+        padding : 20% 2% 10% 2%;
+    }
+
+    .continue button {
+        width: 98%;
+    }
 }
