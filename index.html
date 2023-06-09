@@ -4,35 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | QR code component</title>
+  <link rel="stylesheet" href="./index.css">
+  <script type="module" src="index.js"></script>
+
+  <title>Frontend Mentor | Age calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div class="container">
-    <div class="qrcode">
-      <img src="./images/image-qr-code.png" height="300px">
-    </div>
-    <div class="description">
-      <span>Improve your front-end skills by building projects</span>
-    </div>
-    <div class="instruction">
-      <span>&nbsp&nbspScan the QR code to visit Frontend Mentor and take your coding skills to the next level</span>
-    </div>
-  </div>
-  <!-- <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </footer> -->
+  <article class="theApp">
+    <section class="input">
+      <div class="day-input">
+        <span class="input-label">DAY</span>
+        <input type="text" class="userInput" placeholder="DD">
+        <span class ="error-message hide">This field is required</span>
+        <span class ="error-message hide">Must be a valid day</span>
+      </div>
+      <div class="month-input">
+        <span class="input-label">MONTH</span>
+        <input type="text" class="userInput" placeholder="MM">
+        <span class ="error-message hide">This field is required</span>
+        <span class ="error-message hide">Must be a valid month</span>
+      </div>
+      <div class="year-input">
+        <span class="input-label">YEAR</span>
+        <input type="text" class="userInput" placeholder="YYYY">
+        <span class ="error-message hide">This field is required</span>
+        <span class ="error-message hide">Must be in the past</span>
+      </div>
+    </section>
+    <section class="break">
+      <span class="line"></span>
+      <button class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 46 44">
+          <g fill="none" stroke="#FFF" stroke-width="1">
+            <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/>
+          </g>
+        </svg>
+      </button>
+    </section>
+    <section class="output">
+      <div>
+        <span class="year-value">--</span>
+        <span class="output-label">years</span> 
+      </div>
+      <div>
+        <span class="month-value">--</span>
+        <span class="output-label">months</span>
+      </div>
+      <div>
+        <span class="day-value">--</span>
+        <span class="output-label">days</span>
+      </div>
+    </section>
+  </article>
 </body>
 </html>

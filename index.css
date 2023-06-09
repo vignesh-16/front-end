@@ -1,43 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&family=Outfit:wght@100;400;500;600;700&display=swap');
+
 body {
-    background-color:aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: hsl(0, 0%, 86%);
     height: 100vh;
     font-family: 'Outfit', sans-serif;
 }
 
-.container {
+.theApp {
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    width: 330px;
-    height: fit-content;
-    border-radius: 10px;
+    width: 40%;
+    padding: 2.1%;
+    border-radius: 2em;
+    border-bottom-right-radius: 12em;
 }
 
-.container > .qrcode {
+.input {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 2px 15px 2px;
+    justify-content: start;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    letter-spacing: 3px;
 }
 
-.qrcode > img {
-    border-radius: 10px;
+.input input {
+    width: 80%;
+    outline: none;
+    border: 1px solid hsl(0, 0%, 86%);
+    height: 2.4em;
+    border-radius: 6px;
 }
 
-.description span {
+.input input:focus {
+    outline: 1px solid hsl(259, 100%, 65%);
+}
+
+.day-input, .month-input, .year-input {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 34px;
-    font-size: x-large;
+    flex-direction: column;
+    width: 27%;
+    padding-right: 1.5%;
 }
 
-.instruction span {
+.userInput, .userInput, .userInput  {
+    padding-left: 6%;
+    font-size: 1.6em;
+    font-weight: 800;
+    text-decoration: double;
+    height: 10%;
+    width: 30%;
+}
+
+.input-label {
+    font-weight: 700;
+    color: hsl(0, 0%, 45%);
+    padding-bottom: 5px;
+}
+
+.break {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    font-weight: lighter;
-    padding: 15px 17px 35px 26px;
-    color: dimgrey;
+}
+
+.line {
+    height: 1px;
+    border: none;
+    width: 83%;
+    background: hsl(0, 0%, 86%);
+    padding-left: 1%;
+    padding-right: 3%
+}
+
+.icon {
+     height: 100px;
+     width: 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: hsl(259, 100%, 65%);
+     border-radius: 50%;
+     border: hsl(259, 100%, 65%);
+}
+
+.icon:hover {
+    background-color: black;
+}
+
+.hide {
+    display: none;
+}
+
+.error input {
+    border: 1px solid red;
+}
+
+.error input:focus {
+    border: 1px solid rgb(228, 98, 98);
+}
+
+.error-message {
+    padding-top: 5px;
+    font-style: italic;
+    letter-spacing: 0;
+    word-spacing: 1px;
+    color: #f25252;
+}
+
+.error-message-label {
+    color: #f25252;
+    font-style: normal;
+}
+
+.year-value, .month-value, .day-value {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 6em;
+    color: hsl(259, 100%, 65%);
+}
+
+.output-label {
+    padding: 0% 0% 0% 2%;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 6em;
+}
+
+@media screen and (max-width: 440px) {
+    .theApp {
+        width:100%;
+        border-bottom-right-radius: 8em;
+    }
+
+    .break {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input {
+        justify-content: center;
+        padding: 7% 0% 8% 1%;
+    }
+
+    .userInput, .userInput, .userInput  {
+        padding-left: 6%;
+        font-size: 1.6em;
+        font-weight: 600;
+        text-decoration: double;
+    }
+
+    .input input {
+        width: 90%;
+        outline: none;
+        border: 1px solid hsl(0, 0%, 86%);
+        height: 2.1em;
+        border-radius: 8px;
+    }
+
+    .day-input, .month-input, .year-input {
+        display: flex;
+        flex-direction: column;
+        width: 26%;
+        padding-right: 6%;
+    }
+
+    .day-input {
+        padding-left: 3%;
+    }
+
+    .input-label {
+        padding-bottom: 5px;
+    }
+
+    .line {
+        position: absolute;
+    }
+
+    .icon {
+        height: 60px;
+        width: 60px;
+        z-index: 1;
+    }
+
+    .icon svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .year-value, .month-value, .day-value {
+        font-weight: 800;
+        font-style: italic;
+        font-size: 4em;
+        color: hsl(259, 100%, 65%);
+    }
+    
+    .output-label {
+        font-weight: 800;
+        font-style: italic;
+        font-size: 4em;
+    }
 }
